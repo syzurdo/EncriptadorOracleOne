@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/Vector.svg" alt="">
+        </div>
+    </header>
+<main>
+  
+    <div class="derecha">
+        <div class="texto">
+            <textarea placeholder="Ingrese el texto" id="MensajeTextarea"></textarea>
+        </div>
+    <div class="inferior">
+        <div class="alerta">
+            <img src="./img/Vector (1).svg" alt="">
+            <span>Solo letras minúsculas y sin acentos</span>
+        </div>
+
+        <div class="botones">
+            <button class="encriptar" onclick="encriptar()" >Encriptar</button>
+            <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+            <button class="encriptar" onclick="limpiar()"  >Limpiar</button>
+        </div>
+    
+    </div>
+       
+    </div>
+
+    <div class="AreamostrarMensaje">
+<div class="imagen" id="imagen">
+    <img src="./img/Muñeco.png" alt="">
+</div>
+
+<div class="mensajes">
+    <p class="mensaje1" id="mensaje1">Ningún mensaje fue encontrado</p>
+    <p  class="mensaje2" id="mensaje2" >Ingresa el texto que desees encriptar o desencriptar</p>
+    <p class="mensajeCopiar" id="mensajeCopiar"></p>
+  
+
+</div>
+<button type="button" onclick="copiar()" id="copiar">Copiar</button>
+<div>
+    
+</div>
+    </div>
+ 
+  
+</main>
+<footer>
+    <p>
+        Elaborado por: Santos Yonatan Zurdo Sunun
+    </p>
+</footer>
+<script src="./javascript.js">
+</script>
+</body>
+</html>
