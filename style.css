@@ -200,7 +200,7 @@ footer p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .AreamostrarMensaje{
         overflow: scroll;
         height: 300px;
