@@ -61,7 +61,7 @@ margin-top: 300px;
 
 .botones button {
   margin-left: 10px;
-  width: 328px;
+  width: 208px;
   height: 67px;
   border-radius: 24px;
   font-size: 24px;
@@ -200,7 +200,7 @@ footer p {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
     .AreamostrarMensaje{
         overflow: scroll;
         height: 300px;
