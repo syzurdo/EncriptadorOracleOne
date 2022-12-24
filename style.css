@@ -165,7 +165,7 @@ footer p {
   }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   
    
   .texto textarea {
@@ -198,9 +198,9 @@ footer p {
   .AreamostrarMensaje img {
     display: none;
   }
-} */
+}
 
-@media (max-width: 760px) {
+@media (max-width: 450px) {
     .AreamostrarMensaje{
         overflow: scroll;
         height: 300px;
