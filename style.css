@@ -14,7 +14,7 @@ main {
   width: 31px;
   height: 48px;
   margin-left: 40px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 
@@ -29,7 +29,7 @@ main {
 .texto textarea {
   width: 638px;
   height: 308px;
-margin-top: 300px;
+margin-top: 50px;
   background-color: #e5e5e5;
   border: 0;
   font-size: 32px;
@@ -40,7 +40,7 @@ margin-top: 300px;
 
 .alerta {
   display: flex;
-
+margin-top: 100px;
 
 }
 .alerta img {
@@ -79,7 +79,7 @@ margin-top: 300px;
 
 .AreamostrarMensaje {
     width: 30%;
-    height:850px;
+    height:650px;
     background-color: white;
     box-shadow: -11px 9px 20px -13px rgba(0,0,0,0.84);
     -webkit-box-shadow: -11px 9px 20px -13px rgba(0,0,0,0.84);
@@ -93,7 +93,7 @@ margin-top: 300px;
 .AreamostrarMensaje img {
   width: 236px;
   height: 204px;
-  margin-top: 250px;
+  margin-top: 150px;
   /* display: none; */
 }
 
