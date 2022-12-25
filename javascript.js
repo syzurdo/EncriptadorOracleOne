@@ -45,7 +45,8 @@ function encriptar() {
     for (var i = 0; i < datos.length; i++) {
       mostrar(datos[i]);
     }
-
+    alert("Mensaje Encriptado");
+  
     document.getElementById("mensajeCopiar").innerHTML = encriptado.join("");
   } else {
     alert("Escribe el mensaje para poder encriptarlo");
@@ -76,6 +77,8 @@ function desencriptar() {
     for (var i = 0; i < datos.length; i++) {
       mostrar(datos[i]);
     }
+
+    
 
     document.getElementById("mensajeCopiar").innerHTML = encriptado;
   } else {
@@ -110,4 +113,6 @@ function ocultar(datos) {
   function mostrar(datos) {
     document.getElementById(datos).style.display = "block";
   }
+  
+
   
