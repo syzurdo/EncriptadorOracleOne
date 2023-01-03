@@ -1,3 +1,26 @@
+
+
+
+function mayusculasCaracteres(dato){
+
+  datosAceptados = /[a-z\s]/;
+
+console.log(dato)
+  for (var i = 0; i < dato.length; i++) {
+
+if(datosAceptados.test(dato[i])==false){
+return false
+}
+
+
+
+
+}
+     }
+
+
+
+
 function copiar() {
   var content = document.getElementById("mensajeCopiar").innerHTML;
   navigator.clipboard
@@ -12,75 +35,93 @@ function copiar() {
 
 function encriptar() {
   var contenido = document.getElementById("MensajeTextarea").value;
-  var contenidoMinustulas = contenido.toLowerCase();
-  if (contenidoMinustulas) {
+
+
+
+ 
+  if (contenido) {
     const encriptado = new Array();
-
-    for (var i = 0; i < contenidoMinustulas.length; i++) {
-      if (contenidoMinustulas[i] == "e") {
-        encriptado[i] = "enter";
-      } else if (contenidoMinustulas[i] == "a") {
-        encriptado[i] = "ai";
-      } else if (contenidoMinustulas[i] == "i") {
-        encriptado[i] = "imes";
-      } else if (contenidoMinustulas[i] == "o") {
-        encriptado[i] = "ober";
-      } else if (contenidoMinustulas[i] == "u") {
-        encriptado[i] = "ufat";
-      } else {
-        encriptado[i] = contenidoMinustulas[i];
-      }
-    }
-    //array de id a ocultar
-    var datos = ["imagen", "mensaje1", "mensaje2"];
-
-    for (var i = 0; i < datos.length; i++) {
-      ocultar(datos[i]);
-    }
-
-    //array de id a mostrar
-
-    var datos = ["mensajeCopiar", "copiar"];
-
-    for (var i = 0; i < datos.length; i++) {
-      mostrar(datos[i]);
-    }
-    alert("Mensaje Encriptado");
+    if(mayusculasCaracteres(contenido)==false){
+      alert("solo minusculas sin acentos");
   
-    document.getElementById("mensajeCopiar").innerHTML = encriptado.join("");
-  } else {
+    } else{
+      for (var i = 0; i < contenido.length; i++) {
+
+
+     
+        if (contenido[i] == "e") {
+          encriptado[i] = "enter";
+        } else if (contenido[i] == "a") {
+          encriptado[i] = "ai";
+        } else if (contenido[i] == "i") {
+          encriptado[i] = "imes";
+        } else if (contenido[i] == "o") {
+          encriptado[i] = "ober";
+        } else if (contenido[i] == "u") {
+          encriptado[i] = "ufat";
+        } else {
+          encriptado[i] = contenido[i];
+        }
+      }
+      //array de id a ocultar
+      var datos = ["imagen", "mensaje1", "mensaje2"];
+  
+      for (var i = 0; i < datos.length; i++) {
+        ocultar(datos[i]);
+      }
+  
+      //array de id a mostrar
+  
+      var datos = ["mensajeCopiar", "copiar"];
+  
+      for (var i = 0; i < datos.length; i++) {
+        mostrar(datos[i]);
+      }
+      alert("Mensaje Encriptado");
+    
+      document.getElementById("mensajeCopiar").innerHTML = encriptado.join("");
+   
+    }
+   } else {
     alert("Escribe el mensaje para poder encriptarlo");
   }
 }
 
 function desencriptar() {
   var contenido = document.getElementById("MensajeTextarea").value;
-  var contenidoMinustulas = contenido.toLowerCase();
+
   if (contenido) {
-    var encriptado = contenidoMinustulas.replaceAll("enter", "e");
-    encriptado = encriptado.replaceAll("imes", "i");
-    encriptado = encriptado.replaceAll("ai", "a");
-    encriptado = encriptado.replaceAll("ober", "o");
-    encriptado = encriptado.replaceAll("ufat", "u");
+    if(mayusculasCaracteres(contenido)==false){
+      alert("solo minusculas sin acentos");
+  
+    } else{
 
-    //array de id a ocultar
-    var datos = ["imagen", "mensaje1", "mensaje2"];
-
-    for (var i = 0; i < datos.length; i++) {
-      ocultar(datos[i]);
+      var encriptado = contenido.replaceAll("enter", "e");
+      encriptado = encriptado.replaceAll("imes", "i");
+      encriptado = encriptado.replaceAll("ai", "a");
+      encriptado = encriptado.replaceAll("ober", "o");
+      encriptado = encriptado.replaceAll("ufat", "u");
+  
+      //array de id a ocultar
+      var datos = ["imagen", "mensaje1", "mensaje2"];
+  
+      for (var i = 0; i < datos.length; i++) {
+        ocultar(datos[i]);
+      }
+  
+      //array de id a mostrar
+  
+      var datos = ["mensajeCopiar", "copiar"];
+  
+      for (var i = 0; i < datos.length; i++) {
+        mostrar(datos[i]);
+      }
+  
+      
+  
+      document.getElementById("mensajeCopiar").innerHTML = encriptado;
     }
 
-    //array de id a mostrar
-
-    var datos = ["mensajeCopiar", "copiar"];
-
-    for (var i = 0; i < datos.length; i++) {
-      mostrar(datos[i]);
-    }
-
-    
-
-    document.getElementById("mensajeCopiar").innerHTML = encriptado;
   } else {
     alert("Escribe el mensaje para poder encriptarlo");
   }
