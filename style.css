@@ -163,6 +163,10 @@ footer p {
   .AreamostrarMensaje {
     width: 40%;
   }
+  .texto textarea {
+    width: 100%;
+    height: 108px;
+  }
 }
 
 @media (max-width: 768px) {
